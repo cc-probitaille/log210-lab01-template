@@ -1,7 +1,5 @@
 @startuml dss-details-demarrerJeu
 skinparam style strictuml
-skinparam backgroundcolor transparent
-skinparam SequenceBoxBorderColor transparent
 skinparam participantpadding 10
 'skinparam handwritten true
 skinparam sequenceMessageAlign center
