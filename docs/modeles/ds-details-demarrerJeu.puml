@@ -5,6 +5,9 @@ skinparam SequenceBoxBorderColor transparent
 skinparam participantpadding 10
 'skinparam handwritten true
 skinparam sequenceMessageAlign center
+
+title Diagramme de séquence avec visibilité des couches - Démarrer une partie de jeu de dés
+
 actor ":Joueur" as j
 box "Couche présentation\n(Navigateur + une partie du Serveur)" #ddffdd
 participant ":Button" as b <<NavigateurWeb>>

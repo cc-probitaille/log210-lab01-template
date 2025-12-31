@@ -24,9 +24,11 @@ export class JeuRouter {
   }
 
   /**
-   * démarrer le jeu
+   * 
    */
   public demarrerJeu(req: Request, res: Response, next: NextFunction) {
+
+    // Obtenir nom du joueur dans la requête POST
     const nom = req.body.nom;
 
     // POST ne garantit pas que tous les paramètres de l'opération système sont présents
@@ -36,7 +38,10 @@ export class JeuRouter {
 
     // Invoquer l'opération système (du DSS) dans le contrôleur GRASP
     const joueur = this._controleurJeu.demarrerJeu(nom);
+
+    // Convertir la string JSON en objet pour l'inclure dans la réponse (ce n'est pas un objet du modèle)
     const joueurObj = JSON.parse(joueur);
+
     req.flash('info', `Nouveau jeu pour ${nom}`);
     res.status(201)
       .send({
@@ -87,8 +92,7 @@ export class JeuRouter {
   }
 
   /**
-     * Take each handler, and attach to one of the Express.Router's
-     * endpoints.
+     * Initialiser les routes du router 
      */
   init() {
     this._router.post('/demarrerJeu', this.demarrerJeu.bind(this)); // pour .bind voir https://stackoverflow.com/a/15605064/1168342

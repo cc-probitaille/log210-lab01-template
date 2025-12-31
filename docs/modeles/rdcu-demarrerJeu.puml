@@ -1,15 +1,37 @@
 @startuml
-skinparam style strictuml
-skinparam defaultfontname Verdana
+hide footbox
+
 title RDCU pour démarrerJeu
-participant ":JeuDeDes" as c
-->c : demarrerJeu(nom)
-note right : selon Contrôleur\n(JeuDeDés est l'objet racine du MDD)
-participant "j:Joueur" as j
-create j
-participant "joueurs:\nMap<String,Joueur>" as jm
-c-->j : j = create(nom)
-note right : selon Créateur\n(JeuDeDes //agrège// Joueur)
-c -> jm : add(j)
-note right : selon Expert
+
+participant ":JeuDeDes" as J
+participant "j:Joueur" as P
+participant "joueurs:\nMap<String,Joueur>" as M
+
+-> J : demarrerJeu(nom : String)
+activate J
+
+note right
+  selon Contrôleur
+  (JeuDeDes est
+  l'objet racine)
+end note
+
+Create P
+J -> P : j = new Joueur(nom : String)
+
+note right
+  selon Créateur
+  (JeuDeDes
+  agrège Joueur)
+end note
+
+J -> M : add(j : Joueur)
+activate M
+deactivate M
+
+note right
+  selon Expert
+end note
+
+deactivate J
 @enduml

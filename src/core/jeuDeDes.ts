@@ -18,9 +18,11 @@ export class JeuDeDes {
     }
 
     /**
-     *  opérations systèmes (du DSS), responsabilités données aux contrôleur GRASP
+     * Ppérations systèmes (du DSS), responsabilités données aux contrôleur GRASP
+     * 
+     * @param nom nom du joueur
+     * @returns le joueur créé (sous forme de string JSON) 
      */
-
     public demarrerJeu(nom: string): string {
 
         if (this._joueurs.get(nom)) {
@@ -29,6 +31,7 @@ export class JeuDeDes {
 
         const joueur = new Joueur(nom);
         this._joueurs.set(nom, joueur);
+        
         // ne pas retourner l'objet de la couche domaine
         return JSON.stringify(joueur);
     }
