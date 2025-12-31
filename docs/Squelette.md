@@ -133,7 +133,7 @@ Pour plus d'informations au sujet de l'utilisation des breakpoints dans WebStorm
 
 Dans un design favorisant la maintenabilité, on évite que la couche Présentation ait la responsabilité de gérer les évènements système (opérations système). Larman présente dans son livre un exemple avec un JFrame (en Java Swing) à la figure F16.24. On l'adapte ici au contexte d'un service Web dans le framework Express (Node.js):
 
-![Diagramme de séparation des couches avec une opération système envoyée au contrôleur GRASP](http://www.plantuml.com/plantuml/proxy?cache=no&fmt=svg&src=https://raw.githubusercontent.com/cc-probitaille/log210-lab01-template/refs/heads/main/docs/modeles/figure-f16.24-web.puml)
+![Diagramme de séparation des couches avec une opération système envoyée au contrôleur GRASP](https://raw.githubusercontent.com/cc-probitaille/log210-lab01-template/refs/heads/main/docs/modeles/figure-f16.24-web.png)
 
 Dans la figure ci-dessus, l'objet `:JeuDeDes` (qui est un objet en dehors de la couche présentation) reçoit l'opération système `demarrerJeu(nom)` selon le principe GRASP Contrôleur. Ce squelette respecte cette séparation.
 
