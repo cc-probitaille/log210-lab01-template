@@ -73,7 +73,7 @@ Assurez-vous d'utiliser toujours le même compte GitHub pour accéder à ce proj
 
 ## Réalisation de cas d'utilisation (RDCU)
 
-> Chaque opération système ayant un contrat nécessite une RDCU. Si un cas d'utilisation n'a aucun contrat (car pas de postconditions), il faut réaliser au minimum une RDCU.
+> Chaque opération système ayant un contrat nécessite une RDCU. Si un cas d'utilisation n'a aucun contrat (car pas de postconditions), il faut réaliser au minimum une RDCU pour l'opération de votre choix (idéalement la plus complexe). 
 > Vos RDCU doivent être des diagrammes de séquences d'opérations tel que vu dans le cours de LOG121.
 > Vos diagrammes doivent inclurent: 
 > - La création des instances nécessaires pour réaliser cette séquence
